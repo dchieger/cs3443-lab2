@@ -86,13 +86,13 @@ public class Superhero {
     //Come back and fix this 06/28
     @Override
     public String toString() {
-        System.out.println("-" + this.heroName + "\n" +
-                "\tReal Name:" + this.name + "\n" +
-                "\tGender:" + this.gender + "\n" +
-                "\tHeight:" + this.heightFt + "'" + this.heightIn + "\"" + "\n" +
-                "\tWeight:" + this.weight + "\n" +
-                "\tPowers:" + this.superPowers + "\n" +
-                "\tLocation:" + this.location + "\n");
+        System.out.println("\t-" + this.heroName + "\n" +
+                "\t\tReal Name: " + this.name + "\n" +
+                "\t\tGender: " + this.gender + "\n" +
+                "\t\tHeight: " + this.heightFt + "'" + this.heightIn + "\"" + "\n" +
+                "\t\tWeight: " + this.weight + "\n" +
+                "\t\tPowers: " + this.superPowers + "\n" +
+                "\t\tLocation: " + this.location + "\n");
         return "";
     }
 }

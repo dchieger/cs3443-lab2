@@ -15,10 +15,11 @@ public class Team {
     public void loadHeros(String file) {
         try {
             BufferedReader br = new BufferedReader(new FileReader(file));
-            String line;
-            while ((line = br.readLine()) != null) {
-                String[] hero = line.split(",");
-                Superhero newHero = new Superhero(hero[0], hero[1], hero[2], hero[3], hero[4], hero[5], Boolean.parseBoolean(hero[6]), hero[7]);
+            String currentLine;
+            while ((currentLine = br.readLine()) != null) {
+                String[] superHero = currentLine.split(",");
+                Superhero newHero = new Superhero(superHero[0], superHero[1], superHero[2], superHero[3],
+				                  superHero[4], superHero[5], Boolean.parseBoolean(superHero[6]), superHero[7]);
                 teamMembers.add(newHero);
             }
         } catch (IOException e) {
