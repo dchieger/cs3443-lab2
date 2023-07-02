@@ -12,14 +12,14 @@ public class Team {
         setTeamName(teamName);
     }
 
-    public void loadHeros(String file) {
+    public void loadHeroes(String file) {
         try {
             BufferedReader br = new BufferedReader(new FileReader(file));
             String currentLine;
             while ((currentLine = br.readLine()) != null) {
-                String[] superHero = currentLine.split(",");
-                Superhero newHero = new Superhero(superHero[0], superHero[1], superHero[2], superHero[3],
-				                  superHero[4], superHero[5], Boolean.parseBoolean(superHero[6]), superHero[7]);
+                String[] lineIndex = currentLine.split(",");
+                Superhero newHero = new Superhero(lineIndex[0], lineIndex[1], lineIndex[2], lineIndex[3],
+				                  lineIndex[4], lineIndex[5], Boolean.parseBoolean(lineIndex[6]), lineIndex[7]);
                 teamMembers.add(newHero);
             }
         } catch (IOException e) {
@@ -37,9 +37,11 @@ public class Team {
 
     @Override
     public String toString() {
-        return "Team{" +
-                "teamName='" + teamName + '\'' +
-                ", teamMembers=" + teamMembers +
-                '}';
+       System.out.println("Team " + teamName + ":");
+        for(Superhero hero : teamMembers) {
+            System.out.println(hero.toString());
+        }
+        return "";
+
     }
 }
